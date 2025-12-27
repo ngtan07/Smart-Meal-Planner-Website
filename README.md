@@ -1,4 +1,4 @@
-<!-- Smart Meal Planner (React Frontend)
+Smart Meal Planner (React Frontend)
 
 Smart Meal Planner là một ứng dụng web frontend xây dựng bằng React, giúp người dùng:
 - Lập kế hoạch ăn uống theo ngày / tuần
@@ -34,4 +34,4 @@ Hướng phát triển
 + JWT Authentication
 
 Tác giả: An Nguyễn Thanh
-Mục đích: Portfolio & học tập React -->
+Mục đích: Portfolio & học tập React
