@@ -1,0 +1,57 @@
+.home-page h2 {
+  color: rgb(255, 221, 221);
+}
+
+.home-page p {
+  color: rgb(207, 200, 200);
+  font-style: italic;
+}
+
+.home-shortcut {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.shortcut-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 14px;
+  border: none;
+  padding: 40px 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+.shortcut-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+  opacity: 0.8;
+}
+
+.shortcut-icon {
+  padding: 18px 18px 12px 18px;
+  margin-bottom: 10px;
+  border-radius: 90%;
+  color: white;
+}
+
+.shortcut-item span {
+  font-size: 16px;
+  color: #551d5bfc;
+}
+
+
+/* LIST SUGGEST */
+
+.text-suggest {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.view-recipe-btn {
+  background-color: rgba(194, 169, 249, 0.7);
+}

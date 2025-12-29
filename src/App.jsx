@@ -1,11 +1,15 @@
 import { useState } from 'react'
-import LoginPage from './pages/auth/LoginPage'
+import Footer from './components/common/footer'
+import Header from './components/common/header'
+import { Outlet } from 'react-router-dom'
 
 function App() {
 
   return (
     <>
-      <LoginPage />
+      <Header />
+      <Outlet />
+      <Footer />
     </>
   )
 }
