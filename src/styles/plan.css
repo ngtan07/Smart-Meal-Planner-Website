@@ -1,0 +1,254 @@
+.calendar-form {
+  width: 100%;
+  padding: 18px 0;
+}
+
+/* ================= WEEK HEADER ================= */
+.week-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  margin-bottom: 24px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #6e1709 0%, #862411 50%, #a83219 100%);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 24px rgba(101, 22, 9, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+/* ================= TITLE ================= */
+.week-header h5 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+  margin: 0;
+  text-align: center;
+  flex: 1;
+}
+
+/* ================= BUTTON ================= */
+.week-header button {
+  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  padding: 7px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+/* hover nhẹ, đúng tinh thần glass */
+.week-header button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+/* click có cảm giác */
+.week-header button:active {
+  transform: translateY(0);
+}
+
+/* icon màu dịu */
+.week-header svg {
+  color: #e59e22;
+  opacity: 0.9;
+}
+
+
+/* ================= DAY CARD GROUP ================= */
+.day-card-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ================= SINGLE DAY CARD ================= */
+.week-days {
+  position: relative;
+  display: flex;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(6px);
+}
+
+/* ================= DAY INFO ================= */
+.week-day-text {
+  min-width: 90px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  text-align: center;
+  border-right: 1px solid rgba(101, 22, 9, 0.1);
+}
+
+.week-day-text p:first-child {
+  font-size: 13px;
+  font-weight: 600;
+  color: #718096;
+}
+
+.week-day-text p:last-child {
+  font-size: 14px;
+  font-weight: 600;
+  color: #651609;
+}
+
+/* ================= MEAL LIST ================= */
+.week-meal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  padding: 8px 4px 8px 14px;
+  border-radius: 18px;
+}
+
+/* ================= MEAL CARD ================= */
+.meal-card-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: #fff5f5;
+  transition: all 0.2s ease;
+}
+
+.meal-card-group:hover {
+  background: rgb(253, 226, 228, 0.8);
+}
+
+/* ================= MEAL TEXT ================= */
+.meal-row p:first-child {
+  font-size: 14px;
+  font-weight: 600;
+  color: #651609;
+}
+
+.meal-row p:last-child {
+  font-size: 13px;
+  color: #718096;
+}
+
+/* ================= ADD BUTTON ================= */
+
+.action-btn.add:hover {
+  background: #fad4d4;
+}
+
+.action-btn.add svg {
+  color: #651609;
+}
+
+/* Today */
+.week-days.is-today {
+  border: 2px solid #e59e22;
+}
+
+.week-days.is-today::after {
+  content: "Today";
+  position: absolute;
+  top: -10px;
+  left: 18px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #862411;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(101, 22, 9, 0.25);
+  backdrop-filter: blur(6px);
+}
+
+.week-days.is-today .week-day-text p:last-child {
+  color: #e59e22;
+  font-weight: 800;
+}
+/* ================================================= */
+
+/* ADD  */
+.calendar-add-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.calendar-add-box {
+  position: relative;
+  width: 460px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  animation: scaleIn 0.2s ease;
+  margin: auto;
+}
+
+.calendar-add-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #862411;
+}
+
+.calendar-add-input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 18px;
+}
+
+.calendar-add-input:focus {
+  border-color: #651609;
+  background: white;
+  box-shadow: 0 0 0 1px rgba(101, 22, 9, 0.1);
+}
+
+.calendar-add-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn {
+  border: none;
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+
+
+

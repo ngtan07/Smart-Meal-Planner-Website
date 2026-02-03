@@ -1,5 +1,5 @@
 
-import { BookOpen, Calendar, Package, ShoppingCart, ChefHat, Clock } from 'lucide-react';
+import { BookOpen, Calendar, Package, ShoppingCart } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/home.css'
 
@@ -23,7 +23,7 @@ const Menu = () => {
                         <button
                             key={shortcut.path}
                             onClick={() => navigate(shortcut.path)}
-                            className="shortcut-item"
+                            className="shortcut-item card"
                         >
                             <div className="shortcut-icon" style={{ backgroundColor: shortcut.color }}>
                                 <shortcut.icon />

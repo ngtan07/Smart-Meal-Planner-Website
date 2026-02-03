@@ -32,7 +32,7 @@ const Header = () => {
                 <div className="nav-logout">
                     <button className='logout-btn'
                         onClick={handleLogout}>
-                        <LogOut color='#595ef5ff' />
+                        <LogOut />
                         <span>Logout</span>
                     </button>
                 </div>

@@ -1,0 +1,91 @@
+.card-noti-shopping {
+  margin: 16px 0;
+  padding: 16px 20px;
+  border-radius: 16px;
+  /* Nền hồng đỏ rất nhạt */
+  background-color: #fff5f5;
+  /* Viền đỏ siêu mảnh */
+  border: 1px solid rgba(101, 22, 9, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.card-noti-shopping p {
+  /* Chữ màu đỏ đô */
+  color: #651609;
+  font-size: 15px;
+  margin: 0;
+}
+
+
+/* Tiêu đề section */
+h3.shopping {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 24px 0 16px 0;
+}
+
+.ingredient-card-shopping:hover {
+  transform: translateY(0px);
+  box-shadow: 0 4px 4px rgba(212, 107, 107, 0.1);
+  cursor: auto;
+}
+
+.ingredient-card-shopping input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #cbd5e0;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 16px;
+  display: grid;
+  place-content: center;
+  transition: all 0.2s ease;
+}
+
+/* Khi check vào thì hiện màu đỏ đô */
+.ingredient-card-shopping input[type="checkbox"]::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em white; /* Dấu check màu trắng */
+  transform-origin: center;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.ingredient-card-shopping input[type="checkbox"]:checked {
+  background-color: #651609;
+  border-color: #651609;
+}
+
+.ingredient-card-shopping input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+/* Nếu đã check thì gạch ngang chữ */
+.ingredient-card-shopping input[type="checkbox"]:checked ~ .text-card-shopping .ingredient-name,
+.ingredient-card-shopping input[type="checkbox"]:checked ~ .text-card-shopping .ingredient-amount {
+  text-decoration: line-through;
+  color: #a0aec0;
+}
+
+
+/* Phần text (Tên + Số lượng) */
+.text-card-shopping {
+  flex: 1; /* Đẩy icon rác sang phải */
+}
+
+.text-card-shopping .ingredient-name {
+  font-weight: 450;
+  color: #2f3744;
+}
+
+.text-card-shopping .ingredient-amount {
+  font-size: 14px;
+  color: #6b7280;
+}

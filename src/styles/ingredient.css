@@ -1,0 +1,182 @@
+/* Nút add */
+.title-ingredient {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-ingredient button {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #651609 0%, #862411 50%, #a83219 100%);
+  border: none;
+  cursor: pointer;
+}
+
+.title-ingredient button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+/* form */
+.form-ingredient {
+  margin: 24px 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 4px rgba(212, 107, 107, 0.1);
+}
+
+.form-title h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #8a332a;
+}
+
+.form-input {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.r2-input {
+  display: flex;
+  gap: 12px;
+}
+
+.input-quantity {
+  flex: 7;
+}
+
+.input-unit {
+  flex: 1;
+}
+
+.input-ingredient input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 15px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  color: #374151;
+  outline: none;
+}
+
+.input-ingredient input::placeholder {
+  color: #9ca3af;
+}
+
+.input-ingredient input:focus-within {
+  box-shadow: 0 0 0 1px rgb(101, 22, 9, 0.8), 0 3px 7px rgba(101, 22, 9, 0.25);
+}
+/* Action buttons */
+.form-btn {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.form-btn button {
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+
+/* List */
+.text-no-list p {
+  color: rgb(173, 167, 167);
+  text-align: center;
+  font-style: italic;
+  padding: 35px 0;
+}
+
+.ingredient-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 4px rgba(212, 107, 107, 0.1);
+}
+
+.ingredient-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  justify-content: flex-start;
+}
+
+.ingredient-name {
+  font-weight: 450;
+  color: #2f3744;
+}
+
+.ingredient-amount {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.ingredient-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.action-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px; /* vuông bo nhẹ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.action-btn.edit svg {
+  color: #e59e22;
+}
+
+.action-btn.edit:hover {
+  background: rgba(229, 158, 34, 0.15);
+}
+
+.action-btn.delete svg {
+  color: #ef4444;
+}
+
+.action-btn.delete:hover {
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.btn-suggest-meal {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-suggest-meal span {
+  line-height: 1.5;
+}
+
+.btn-suggest-meal svg {
+  display: block;
+  color: white;
+}
+
+

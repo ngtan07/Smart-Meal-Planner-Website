@@ -1,0 +1,231 @@
+[
+    {
+        "id": "1",
+        "name": "Phở Bò",
+        "image": "https://images.unsplash.com/photo-1736631879709-ee5341d7d31c",
+        "area": "Bắc",
+        "category": "mặn",
+        "ingredients": [
+            {
+                "name": "Xương bò",
+                "quantity": "1",
+                "unit": "kg"
+            },
+            {
+                "name": "Bánh phở",
+                "quantity": "500",
+                "unit": "g"
+            },
+            {
+                "name": "Thịt bò",
+                "quantity": "300",
+                "unit": "g"
+            },
+            {
+                "name": "Hành tây",
+                "quantity": "2",
+                "unit": "củ"
+            },
+            {
+                "name": "Gừng",
+                "quantity": "50",
+                "unit": "g"
+            },
+            {
+                "name": "Giá đỗ",
+                "quantity": "200",
+                "unit": "g"
+            },
+            {
+                "name": "Hành lá",
+                "quantity": "1",
+                "unit": "bó"
+            },
+            {
+                "name": "Ngò rí",
+                "quantity": "1",
+                "unit": "bó"
+            }
+        ],
+        "steps": [
+            "Ninh xương bò với hành tây, gừng nướng trong 3-4 tiếng",
+            "Luộc bánh phở",
+            "Thái thịt bò mỏng",
+            "Cho bánh phở và thịt bò vào tô",
+            "Chan nước dùng sôi",
+            "Thêm giá đỗ và rau"
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Cơm Rang Dương Châu",
+        "image": "https://images.unsplash.com/photo-1765052637009-76d9b4c6ece4",
+        "area": "Nhanh",
+        "category": "mặn",
+        "ingredients": [
+            {
+                "name": "Cơm nguội",
+                "quantity": "500",
+                "unit": "g"
+            },
+            {
+                "name": "Trứng gà",
+                "quantity": "3",
+                "unit": "quả"
+            },
+            {
+                "name": "Xúc xích",
+                "quantity": "2",
+                "unit": "cây"
+            },
+            {
+                "name": "Tôm",
+                "quantity": "100",
+                "unit": "g"
+            },
+            {
+                "name": "Đậu Hà Lan",
+                "quantity": "50",
+                "unit": "g"
+            },
+            {
+                "name": "Cà rốt",
+                "quantity": "1",
+                "unit": "củ"
+            }
+        ],
+        "steps": [
+            "Làm trứng bác",
+            "Xào tôm, xúc xích, rau củ",
+            "Cho cơm vào đảo đều",
+            "Nêm gia vị và trộn trứng"
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Thịt Kho Tàu",
+        "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1",
+        "area": "Nam",
+        "category": "mặn",
+        "ingredients": [
+            {
+                "name": "Thịt ba chỉ",
+                "quantity": "500",
+                "unit": "g"
+            },
+            {
+                "name": "Trứng gà",
+                "quantity": "6",
+                "unit": "quả"
+            },
+            {
+                "name": "Nước dừa",
+                "quantity": "500",
+                "unit": "ml"
+            },
+            {
+                "name": "Nước mắm",
+                "quantity": "3",
+                "unit": "thìa"
+            }
+        ],
+        "steps": [
+            "Luộc trứng",
+            "Rim thịt tạo màu",
+            "Thêm nước dừa và gia vị",
+            "Kho nhỏ lửa đến mềm"
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Canh Chua Cá",
+        "image": "https://images.unsplash.com/photo-1736631879709-ee5341d7d31c",
+        "area": "Trung",
+        "category": "canh",
+        "ingredients": [
+            {
+                "name": "Cá bông lau",
+                "quantity": "500",
+                "unit": "g"
+            },
+            {
+                "name": "Me",
+                "quantity": "2",
+                "unit": "thìa"
+            },
+            {
+                "name": "Cà chua",
+                "quantity": "2",
+                "unit": "quả"
+            },
+            {
+                "name": "Dứa",
+                "quantity": "100",
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "Nấu nước dùng chua",
+            "Cho cá vào nấu",
+            "Thêm rau và nêm nếm"
+        ]
+    },
+    {
+        "id": "5",
+        "name": "Đậu Hũ Sốt Cà Chua",
+        "image": "https://images.unsplash.com/photo-1579113800032-c38bd7635818",
+        "area": "Nhanh",
+        "category": "chay",
+        "ingredients": [
+            {
+                "name": "Đậu hũ",
+                "quantity": "400",
+                "unit": "g"
+            },
+            {
+                "name": "Cà chua",
+                "quantity": "3",
+                "unit": "quả"
+            },
+            {
+                "name": "Hành tây",
+                "quantity": "1",
+                "unit": "củ"
+            }
+        ],
+        "steps": [
+            "Chiên đậu hũ",
+            "Xào cà chua",
+            "Cho đậu hũ vào đảo đều"
+        ]
+    },
+    {
+        "id": "6",
+        "name": "Chè Ba Màu",
+        "image": "https://images.unsplash.com/photo-1710106519622-8c49d0bcff2f",
+        "area": "Trung",
+        "category": "tráng miệng",
+        "ingredients": [
+            {
+                "name": "Đậu xanh",
+                "quantity": "100",
+                "unit": "g"
+            },
+            {
+                "name": "Đậu đỏ",
+                "quantity": "100",
+                "unit": "g"
+            },
+            {
+                "name": "Nước cốt dừa",
+                "quantity": "400",
+                "unit": "ml"
+            }
+        ],
+        "steps": [
+            "Nấu đậu",
+            "Chuẩn bị nước cốt dừa",
+            "Xếp lớp và thưởng thức"
+        ]
+    }
+]
