@@ -1,39 +1,43 @@
 
 import { BookOpen, Calendar, Package, ShoppingCart } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-import '../../styles/home.css'
+import { Link } from 'react-router-dom';
+import { Card, Avatar, Typography, Row, Col } from 'antd';
+
+const { Text } = Typography;
 
 const Menu = () => {
 
-    const navigate = useNavigate();
     const shortcuts = [
         { icon: BookOpen, label: 'Recipe', path: '/recipe', color: 'rgb(64, 129, 240)' },
-        { icon: Calendar, label: 'Meal schedule', path: '/plan', color: 'rgb(105, 175, 105)' },
         { icon: Package, label: 'Ingredient', path: '/ingredient', color: 'rgb(165, 93, 165)' },
+        { icon: Calendar, label: 'Meal schedule', path: '/plan', color: 'rgb(105, 175, 105)' },
         { icon: ShoppingCart, label: 'Shopping', path: '/shopping', color: 'rgb(236, 115, 115)' },
     ];
-    return (
-        <>
-            <div className="home-menu">
-                <h2>Welcome back, Ng T An !</h2>
-                <p>What would you like to cook today ?</p>
 
-                <div className="home-shortcut">
-                    {shortcuts.map((shortcut) => (
-                        <button
-                            key={shortcut.path}
-                            onClick={() => navigate(shortcut.path)}
-                            className="shortcut-item card"
-                        >
-                            <div className="shortcut-icon" style={{ backgroundColor: shortcut.color }}>
-                                <shortcut.icon />
-                            </div>
-                            <span className="">{shortcut.label}</span>
-                        </button>
-                    ))}
-                </div>
-            </div >
-        </>
+    const gridSpan = { xs: 24, sm: 12, md: 12 };
+    return (
+        <Row gutter={[25, 25]} /*gap*/ style={{ margin: '50px -12px' }}>
+            {shortcuts.map((shortcut) => (
+                <Col {...gridSpan} key={shortcut.path}>
+                    <Link to={shortcut.path}>
+                        <Card className="card-shadow shortcut-item"
+                            style={{ borderRadius: '14px' }}>
+                            <Avatar
+                                size={64}
+                                icon={<shortcut.icon size={28} color='white' />}
+                                style={{
+                                    backgroundColor: shortcut.color,
+                                }}
+                            />
+
+                            <Text>{shortcut.label}</Text>
+
+                        </Card>
+                    </Link>
+                </Col>
+            ))}
+        </Row>
+
     )
 }
 

@@ -1,29 +1,10 @@
-.home-page p {
-  color: #e59e22;
-  font-style: italic;
-}
-
-.home-shortcut {
-  margin: 50px 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-}
-
-.shortcut-item {
+.shortcut-item .ant-card-body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 14px;
   padding: 40px 8px;
-}
-
-.shortcut-icon {
-  padding: 18px 18px 12px 18px;
-  margin-bottom: 10px;
-  border-radius: 90%;
-  color: white;
+  gap: 10px;
 }
 
 .shortcut-item span {
@@ -34,61 +15,32 @@
 
 /* LIST SUGGEST */
 
-.text-suggest {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.list-recipe {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 20px;
-}
-
 .card-recipe {
-  display: flex;
-  gap: 40px;
-  border-radius: 15px;
   overflow: hidden;
+  border-radius: 14px;
 }
 
-.card-image {
-  width: 130px;
-  height: 94px;
-  overflow: hidden;
+.card-recipe-image {
+  width: 170px;
+  height: 100px;
 }
 
-.card-recipe img {
+.card-recipe-image img {
   width: 100%;
   height: 100%;
   object-fit: cover; /*khong mop anh  */
+  display: block;
 }
 
-.text-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 16px;
-  padding: 10px 0;
+.card-recipe-text {
+  margin: 15px 0;
 }
 
-.text-small {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-
-.text-list h3 {
+.card-recipe-text h5 {
   color: #651609;
 }
 
-.text-list p {
-  font-size: 14px;
-  color: #e59e22;
-  background-color: #8a332a;
+.card-recipe-text .ant-flex span {
   padding: 2px 9px;
   border-radius: 20px;
-  font-weight: 500;
 }

@@ -4,7 +4,7 @@ import '../../styles/shopping.css'
 
 const ShoppingPage = () => {
     return (
-        <div className="recipe-list-page child">
+        <div className="recipe-list-page">
             <div className="page-title">
                 <ShoppingCart color="rgba(243, 167, 54, 1)" />
                 <h2>Shopping list</h2>

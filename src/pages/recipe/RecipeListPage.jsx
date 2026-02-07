@@ -5,13 +5,17 @@ import ListRecipe from "../../components/recipe/list";
 import { BookOpen } from "lucide-react";
 import '../../styles/recipe.css'
 
+import { Typography } from 'antd';
+
+const { Title, Text } = Typography;
+
 const RecipePage = () => {
     return (
-        <div className="recipe-list-page child">
-            <div className="page-title">
-                <BookOpen color="rgba(243, 167, 54, 1)" />
-                <h2>List of recipes</h2>
-            </div>
+        <div className="recipe-list-page">
+            <Title level={4} className="page-title">
+                <BookOpen />
+                <span>List of recipes</span>
+            </Title>
 
             <SearchRecipe />
             <FilterRecipe />

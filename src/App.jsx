@@ -2,18 +2,32 @@ import { useState } from 'react'
 import Footer from './components/common/footer'
 import Header from './components/common/header'
 import { Outlet } from 'react-router-dom'
+import { Layout } from 'antd'
 
-function App() {
+const { Content } = Layout
+
+
+const App = () => {
 
   return (
-    <div className='page'>
+    <Layout style={{
+      minHeight: '100vh',
+      background: 'transparent',
+    }}>
+
       <Header />
-      <main className='main-content'>
-        <Outlet />
-      </main>
+
+      <Content style={{ flex: '1 0 auto' }}>
+        <div className='child'>
+          <Outlet />
+        </div>
+      </Content>
+
       <Footer />
-    </div>
+    </Layout>
+
   )
 }
+
 
 export default App

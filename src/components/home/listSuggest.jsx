@@ -1,50 +1,80 @@
 import { ChefHat } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Row, Col, Card, Button, Typography, Tag, Flex } from 'antd';
 import ListRecipe from '../../mock/recipeList.json'
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { getAllRecipe } from "../../services/recipe.service";
+
+const { Title } = Typography;
 
 const ListSuggest = () => {
     const navigate = useNavigate();
-    const hanldeViewAllRecipe = () => {
-        navigate("/recipe");
+    const [recipes, setRecipes] = useState([]);
+
+    useEffect(() => {
+        RecipeList()
+    }, [])
+
+    // get recipe list
+    const RecipeList = async () => {
+        const res = await getAllRecipe();
+        if (res?.data?.meals) {
+            setRecipes(res.data.meals)
+        }
     }
 
-    const listSuggest = ListRecipe.slice(0, 4);
+    // btn view all recipe
+    const handleViewAllRecipe = () => {
+        navigate('/recipe')
+    }
+
+    // get 5 recipe of all
+    const listSuggest = recipes ? recipes.slice(0, 5) : [];
     return (
         <>
-            <div className="home-list-suggest">
-                <div className="text-suggest">
-                    <ChefHat size={35} color="rgba(255, 177, 68, 1)" />
-                    <h2>Suggest's today</h2>
-                </div>
-                <div className="list-recipe">
-                    {listSuggest.map((recipe) => (
-                        <div
-                            key={recipe.id}
-                            className="card-recipe card"
+            <Flex align="center" gap={10}>
+                <ChefHat size={35} color="rgba(255, 177, 68, 1)" />
+                <Title level={4}>
+                    Today's Suggestions
+                </Title>
+            </Flex>
 
-                        >
-                            <div className="card-image">
-                                <img src={recipe.image} alt={recipe.name} />
-                            </div>
-                            <div className="text-list">
-                                <h3>{recipe.name}</h3>
-                                <div className="text-small">
-                                    <p>{recipe.category}</p>
-                                    <p>{recipe.area}</p>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+            <Row gutter={[20, 20]} style={{ margin: '20px 0' }}>
+                {listSuggest.map((recipe) => (
+                    <Col span={24}
+                        key={recipe.idMeal}
+                        style={{ padding: 0 }}>
+                        <Link to={'/recipe'}>
+                            <Card className="card-shadow card-recipe"
+                                style={{ padding: 0 }}>
+                                <Row gutter={[20, 20]} wrap={false}>
+                                    <Col className="card-recipe-image">
+                                        <img
+                                            alt={recipe.strMeal}
+                                            src={recipe.strMealThumb}
+                                        />
+                                    </Col>
+                                    <Col flex='auto' className="card-recipe-text">
+                                        <Title level={5} style={{ marginBottom: '15px' }}>
+                                            {recipe.strMeal}
+                                        </Title>
+                                        <Flex gap="15px" >
+                                            <Tag color="red">{recipe.strCategory}</Tag>
+                                            <Tag color="orange">{recipe.strArea}</Tag>
+                                        </Flex>
+                                    </Col>
+                                </Row>
+                            </Card>
+                        </Link>
+                    </Col>
+                ))}
 
+            </Row>
 
-                </div>
-
-                <button className="view-recipe-btn btn-w100"
-                    onClick={hanldeViewAllRecipe}>
-                    <span>View all recipe</span>
-                </button>
-
-            </div>
+            <Button block className="btn-w100"
+                onClick={() => handleViewAllRecipe()}>
+                View all recipe
+            </Button>
         </>
     )
 }

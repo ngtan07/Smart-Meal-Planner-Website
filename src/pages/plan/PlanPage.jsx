@@ -5,7 +5,7 @@ import '../../styles/plan.css'
 
 const PlanPage = () => {
     return (
-        <div className="plan-page child">
+        <div className="plan-page">
 
             <div className="page-title">
                 <Calendar color="rgba(243, 167, 54, 1)" />
