@@ -1,0 +1,40 @@
+.ant-image-cover {
+  border-radius: 16px;
+}
+
+.recipe-detail-tag span {
+  font-size: 13px;
+  padding: 6px 18px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.5;
+  color: #e59e22;
+}
+
+.ant-badge-status-dot {
+  width: 10px !important;
+  height: 10px !important;
+  flex-shrink: 0;
+}
+
+.ant-steps {
+  gap: 6px;
+}
+
+.ant-steps-item-icon {
+  color: white !important;
+  background: linear-gradient(135deg, #651609 0%, #862411 50%, #a83219 100%) !important;
+}
+
+.ant-steps-item-rail {
+  background-color: #e59e22 !important;
+  min-height: 10px;
+}
+
+.ant-steps-item-title {
+  color: #651609 !important;
+}
+

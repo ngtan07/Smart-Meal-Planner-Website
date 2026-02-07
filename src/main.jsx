@@ -14,6 +14,7 @@ import IngredientPage from './pages/ingredient/IngredientPage.jsx';
 import ShoppingPage from './pages/shopping/ShoppingPage.jsx';
 import ProfilePage from './pages/profile/ProfilePage.jsx';
 import LoginPage from './pages/auth/LoginPage.jsx';
+import RecipeDetailPage from './pages/recipe/RecipeDetailPage.jsx';
 
 
 
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <ProfilePage />
+      },
+      {
+        path: "/recipeDetail/:id",
+        element: <RecipeDetailPage />
       },
 
     ]

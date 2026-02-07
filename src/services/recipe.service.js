@@ -17,4 +17,8 @@ const getAllRecipe = () => {
     return axios.get(URL_BACKEND)
 }
 
-export { getAllCategory, getAllCategory2, getAllRecipe }
+const getRecipeDetailById = (id) => {
+    const URL_BACKEND = `/lookup.php?i=${id}`
+    return axios.get(URL_BACKEND)
+}
+export { getAllCategory, getAllCategory2, getAllRecipe, getRecipeDetailById }

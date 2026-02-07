@@ -1,6 +1,5 @@
 import { ChefHat } from "lucide-react";
 import { Row, Col, Card, Button, Typography, Tag, Flex } from 'antd';
-import ListRecipe from '../../mock/recipeList.json'
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getAllRecipe } from "../../services/recipe.service";
@@ -11,6 +10,7 @@ const ListSuggest = () => {
     const navigate = useNavigate();
     const [recipes, setRecipes] = useState([]);
 
+
     useEffect(() => {
         RecipeList()
     }, [])
@@ -18,6 +18,7 @@ const ListSuggest = () => {
     // get recipe list
     const RecipeList = async () => {
         const res = await getAllRecipe();
+
         if (res?.data?.meals) {
             setRecipes(res.data.meals)
         }
@@ -44,7 +45,7 @@ const ListSuggest = () => {
                     <Col span={24}
                         key={recipe.idMeal}
                         style={{ padding: 0 }}>
-                        <Link to={'/recipe'}>
+                        <Link to={`/recipeDetail/${recipe.idMeal}`}>
                             <Card className="card-shadow card-recipe"
                                 style={{ padding: 0 }}>
                                 <Row gutter={[20, 20]} wrap={false}>
