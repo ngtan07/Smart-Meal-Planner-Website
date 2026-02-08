@@ -1,8 +1,8 @@
 import '../../styles/recipeDetail.css'
 
-import RecipeDetailImage from '../../components/recipe/recipe-detail/detailImg';
-import RecipeDetailIngredient from '../../components/recipe/recipe-detail/detailIngredient';
-import RecipeDetailStep from '../../components/recipe/recipe-detail/detailStep';
+import RecipeDetailImage from '../../components/recipe/recipe-detail/RecipeDetailImage';
+import RecipeDetailIngredient from '../../components/recipe/recipe-detail/RecipeDetailIngredient';
+import RecipeDetailStep from '../../components/recipe/recipe-detail/RecipeDetailStep';
 import { useParams } from 'react-router-dom';
 import { getRecipeDetailById } from '../../services/recipe.service';
 import { useEffect, useState } from 'react';

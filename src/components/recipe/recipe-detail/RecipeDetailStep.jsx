@@ -1,20 +1,16 @@
-import ListAllRecipe from '../../../mock/recipeList.json'
 import { Typography, Flex, Steps, Button } from 'antd'
 import { Calendar, ShoppingCart } from 'lucide-react';
 import getSteps from '../../../utils/getSteps';
 
-const { Title, Text } = Typography;
+const { Title } = Typography;
 
 const RecipeDetailStep = ({ recipeDetail }) => {
 
-    console.log(recipeDetail)
-
-
-    const recipe = ListAllRecipe.find((recipe) => recipe.id === '1')
     const stepsRaw = getSteps(recipeDetail)
     const steps = stepsRaw.map(step => ({
         title: step,
     }))
+
     return (
         <>
             <Title level={4}

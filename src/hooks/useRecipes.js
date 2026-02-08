@@ -17,7 +17,7 @@ const useRecipes = () => {
         }
     }
 
-    return (recipes)
+    return { recipes }
 }
 
 export default useRecipes

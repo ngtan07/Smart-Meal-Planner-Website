@@ -3,26 +3,13 @@ import { Row, Col, Card, Button, Typography, Tag, Flex } from 'antd';
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getAllRecipe } from "../../services/recipe.service";
+import useRecipes from "../../hooks/useRecipes";
 
 const { Title } = Typography;
 
 const ListSuggest = () => {
     const navigate = useNavigate();
-    const [recipes, setRecipes] = useState([]);
-
-
-    useEffect(() => {
-        RecipeList()
-    }, [])
-
-    // get recipe list
-    const RecipeList = async () => {
-        const res = await getAllRecipe();
-
-        if (res?.data?.meals) {
-            setRecipes(res.data.meals)
-        }
-    }
+    const { recipes } = useRecipes()
 
     // btn view all recipe
     const handleViewAllRecipe = () => {
