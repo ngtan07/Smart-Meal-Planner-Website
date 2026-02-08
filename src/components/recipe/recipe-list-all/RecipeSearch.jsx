@@ -1,21 +1,16 @@
 import { Search } from "lucide-react";
 import { Input } from 'antd';
-import { getRecipeByName } from '../../services/recipe.service'
+import { getRecipeByName } from '../../../services/recipe.service'
+import { useEffect, useState } from "react";
 
-const SearchRecipe = () => {
-
-
-    const searchRecipeByName = async (value) => {
-        const recipe = await getRecipeByName(value)
-    }
-    searchRecipeByName()
+const RecipeSearch = ({ handleSearch }) => {
 
     return (
         <Input className="search-recipe"
             placeholder="Search meal ..."
 
             // onPressEnter return event
-            onPressEnter={(e) => searchRecipeByName(e.target.value)}
+            onPressEnter={(e) => handleSearch(e.target.value)}
             prefix={
                 <Search
                     style={{
@@ -31,4 +26,4 @@ const SearchRecipe = () => {
     )
 }
 
-export default SearchRecipe
+export default RecipeSearch

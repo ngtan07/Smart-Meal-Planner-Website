@@ -1,5 +1,5 @@
 import { Typography, Flex, Badge } from 'antd'
-import getIngredients from '../../utils/getIngredients'
+import getIngredients from '../../../utils/getIngredients'
 
 const { Title, Text } = Typography;
 

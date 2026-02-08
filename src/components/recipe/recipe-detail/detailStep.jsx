@@ -1,7 +1,7 @@
-import ListAllRecipe from '../../mock/recipeList.json'
+import ListAllRecipe from '../../../mock/recipeList.json'
 import { Typography, Flex, Steps, Button } from 'antd'
 import { Calendar, ShoppingCart } from 'lucide-react';
-import getSteps from '../../utils/getSteps';
+import getSteps from '../../../utils/getSteps';
 
 const { Title, Text } = Typography;
 

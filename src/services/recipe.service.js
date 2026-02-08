@@ -26,8 +26,18 @@ const getRecipeByName = (name) => {
     return axios.get(URL_BACKEND)
 }
 
+const getRecipeByCategory = (category) => {
+    const URL_BACKEND = `/filter.php?c=${category}`;
+    return axios.get(URL_BACKEND)
+}
+
+const getRecipeByArea = (area) => {
+    const URL_BACKEND = `/filter.php?a=${area}`;
+    return axios.get(URL_BACKEND)
+}
+
 const getRecipeDetailById = (id) => {
     const URL_BACKEND = `/lookup.php?i=${id}`
     return axios.get(URL_BACKEND)
 }
-export { getAllCategory, getAllArea, getAllRecipe, getRecipeDetailById, getRecipeByName }
+export { getAllCategory, getAllArea, getAllRecipe, getRecipeDetailById, getRecipeByName, getRecipeByCategory, getRecipeByArea }
