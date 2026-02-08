@@ -1,15 +1,19 @@
 import axios from "./axios.customize";
 
-const getAllCategory = async () => {
-    const res = await fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
-    const data = await res.json()
-    return data.categories;
+// const getAllCategory = async () => {
+//     const res = await fetch('https://www.themealdb.com/api/json/v1/1/list.php?c=list')
+//     const data = await res.json()
+//     return data.meals
+// }
+
+const getAllCategory = () => {
+    const URL_BACKEND = '/list.php?c=list';
+    return axios.get(URL_BACKEND)
 }
 
-const getAllCategory2 = async () => {
-    const res = await fetch('https://www.themealdb.com/api/json/v1/1/list.php?c=list')
-    const data = await res.json()
-    return data.meals
+const getAllArea = () => {
+    const URL_BACKEND = '/list.php?a=list';
+    return axios.get(URL_BACKEND)
 }
 
 const getAllRecipe = () => {
@@ -17,8 +21,13 @@ const getAllRecipe = () => {
     return axios.get(URL_BACKEND)
 }
 
+const getRecipeByName = (name) => {
+    const URL_BACKEND = `/search.php?s=${name}`;
+    return axios.get(URL_BACKEND)
+}
+
 const getRecipeDetailById = (id) => {
     const URL_BACKEND = `/lookup.php?i=${id}`
     return axios.get(URL_BACKEND)
 }
-export { getAllCategory, getAllCategory2, getAllRecipe, getRecipeDetailById }
+export { getAllCategory, getAllArea, getAllRecipe, getRecipeDetailById, getRecipeByName }
