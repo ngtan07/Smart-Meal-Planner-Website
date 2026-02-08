@@ -1,8 +1,6 @@
 import { ChefHat } from "lucide-react";
 import { Row, Col, Card, Button, Typography, Tag, Flex } from 'antd';
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { getAllRecipe } from "../../services/recipe.service";
 import useRecipes from "../../hooks/useRecipes";
 
 const { Title } = Typography;

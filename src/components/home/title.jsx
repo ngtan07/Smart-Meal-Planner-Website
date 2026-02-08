@@ -1,7 +1,4 @@
 
-import { BookOpen, Calendar, Package, ShoppingCart } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-
 import { Typography } from 'antd';
 
 const { Title, Text } = Typography;
