@@ -5,7 +5,7 @@ import { Card, Avatar, Typography, Row, Col } from 'antd';
 
 const { Text } = Typography;
 
-const Menu = () => {
+const MenuShortcut = () => {
 
     const shortcuts = [
         { icon: BookOpen, label: 'Recipe', path: '/recipe', color: 'rgb(64, 129, 240)' },
@@ -41,4 +41,4 @@ const Menu = () => {
     )
 }
 
-export default Menu;
+export default MenuShortcut;

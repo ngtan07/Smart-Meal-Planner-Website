@@ -1,6 +1,6 @@
-import Menu from "../../components/home/menu"
-import ListSuggest from "../../components/home/listSuggest"
-import TitleContent from "../../components/home/title"
+import Menu from "../../components/home/MenuShortcut"
+import RecipeSuggestList from "../../components/home/RecipeSuggestList"
+import TitleContent from "../../components/home/TitleContent"
 import '../../styles/home.css'
 
 const HomePage = () => {
@@ -8,7 +8,7 @@ const HomePage = () => {
         <div className="home-page">
             <TitleContent />
             <Menu />
-            <ListSuggest />
+            <RecipeSuggestList />
         </div>
 
     )

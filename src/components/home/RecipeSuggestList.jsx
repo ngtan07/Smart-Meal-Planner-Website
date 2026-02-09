@@ -5,7 +5,7 @@ import useRecipes from "../../hooks/useRecipes";
 
 const { Title } = Typography;
 
-const ListSuggest = () => {
+const RecipeSuggestList = () => {
     const navigate = useNavigate();
     const { recipes } = useRecipes()
 
@@ -65,4 +65,4 @@ const ListSuggest = () => {
     )
 }
 
-export default ListSuggest
+export default RecipeSuggestList
