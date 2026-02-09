@@ -12,7 +12,7 @@ const { Title } = Typography;
 
 const RecipePage = () => {
 
-    const { recipes, filter, handleArea, handleCategory, handleSearch } = useRecipeFilter()
+    const { recipes, filter, loading, handleArea, handleCategory, handleSearch } = useRecipeFilter()
 
     return (
         <div className="recipe-list-page">
@@ -30,6 +30,7 @@ const RecipePage = () => {
                 handleArea={handleArea} />
             <RecipeList
                 recipes={recipes}
+                loading={loading}
             />
         </div>
     )
